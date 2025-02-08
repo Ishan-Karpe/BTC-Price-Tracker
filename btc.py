@@ -55,3 +55,11 @@ tk.Button(root, text="Check Price", command=check_price).pack() # button to chec
 
 root.mainloop() # run the GUI
 # the line above always comes last
+
+'''In Summary:
+1. Import necessary libraries: tkinter for GUI, messagebox for alerts, and requests for API calls.
+2. Create the main application window using tkinter.
+3. Define a StringVar to store the cryptocurrency name and another for the threshold value.
+4. Create a label to display the current price of the cryptocurrency.
+5. Define a function to fetch the current price of a given cryptocurrency using the CoinGecko API.
+6. Get the price of the cryptocurrency in USD.'''
