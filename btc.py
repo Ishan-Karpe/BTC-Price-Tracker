@@ -30,7 +30,11 @@ def get_price(crypto):
 # create a function to check the price
 def check_price():
     crypto = crypto_var.get().lower()
-    threshold = float(threshold_var.get())
+    try:
+        threshold = float(threshold_var.get())
+    except ValueError: # if the threshold is not a number
+        messagebox.showerror("Error", "Threshold must be a number")
+        return
     price = get_price(crypto) # get the price of the crypto
 
     if price is None: # if the crypto is not found
